@@ -1,0 +1,46 @@
+{
+  "name": "DaD",
+  "version": "1.0.0",
+  "description": "Data Algorithms Dissemination is a platform to study Data Science algorithms and theories",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "boilerplate",
+    "mobx",
+    "data-science"
+  ],
+  "author": "Renien Joseph <renien.john@gmail.com> (http://github.com/Renien)",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "babel-core": "^6.3.26",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-1": "^6.3.13",
+    "eslint-plugin-react": "^2.3.0",
+    "webpack": "^1.9.6",
+    "webpack-dev-server": "^1.8.2"
+  },
+  "dependencies": {
+    "fabric": "^1.6.2",
+    "mobx": "^2.0.0",
+    "mobx-react": "^3.0.0",
+    "mobx-react-devtools": "^4.0.0",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "semantic-ui": "^2.1.8"
+  }
+}

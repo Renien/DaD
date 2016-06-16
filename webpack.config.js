@@ -1,8 +1,10 @@
+var debug = process.env.NODE_ENV != "production";
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
+  context: path.___dirname,
   devtool: 'eval',
   entry: [
     'webpack-dev-server/client?http://localhost:3000',

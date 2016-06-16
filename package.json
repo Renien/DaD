@@ -4,7 +4,8 @@
   "description": "Data Algorithms Dissemination is a platform to study Data Science algorithms and theories",
   "scripts": {
     "start": "node server.js",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "ci": "webpack"
   },
   "repository": {
     "type": "git",

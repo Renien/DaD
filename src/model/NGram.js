@@ -1,5 +1,4 @@
 import _ from 'lodash'
-import { split } from './Util'
 
 /**
  * Implementation of 'n-Gram' algorithm
@@ -7,7 +6,6 @@ import { split } from './Util'
 class NGram {
 
     constructor() {
-
     }
     
     /**

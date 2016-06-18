@@ -2,6 +2,11 @@ import ExcelSerializer from './ExcelSerializer';
 
 class WebService {
 
+    /**
+     * Constructor will initialize the API-KEY and 
+     * execute the appropritae service call
+     * @param  {api-key} key
+     */
     constructor(key) {
         this.key = key;
         this.url = "https://spreadsheets.google.com/feeds/list/"+this.key+"/od6/public/values?alt=json";

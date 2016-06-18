@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 import LayOutCSS  from '../styles/layout.css';
+import ViewEngine from '../components/ViewEngine';
 
 @observer
 class MainLayout extends Component {
@@ -12,6 +13,7 @@ class MainLayout extends Component {
                 </div>
                 <div className="segment ui">
                     Content
+                    <ViewEngine appState={this.props.appState}/>
                 </div>
                 <div className="segment ui">
                     Footer

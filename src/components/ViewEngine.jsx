@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 import RenderCanvas from '../algorithm-engine/RenderCanvas';
-import Fabric from 'fabric-webpack';
+import Fabric from 'fabric';
 
 @observer
 class ViewEngine extends Component {

@@ -8,11 +8,11 @@ import LeftBodyMain from '../components/left-body-layout/LeftBodyMain';
 class BodyLayout extends Component {
     render() {
         return (
-            <div className="ui three column doubling grid">
+            <div className="ui three column stackable grid">
                 <div className="column">
                     <div className="ui segment">
-                         <LeftBodyMain appState={this.props.appState}/>
-                    </div>
+                        <LeftBodyMain appState={this.props.appState}/>
+                     </div>
                 </div>
                 <div className="column">
                     <div className="ui segment">

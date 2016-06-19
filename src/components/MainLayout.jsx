@@ -9,12 +9,12 @@ class MainLayout extends Component {
 
     componentWillMount(){
         //Initialize the default algo type
-        appState.algoType = this.props.params.algoType;
+        // appState.algoType = this.props.params.algoType; //bad practice
     }
 
     componentWillReceiveProps(nextProps) {
         //Update the 'algoType' to the state
-        appState.algoType = nextProps.params.algoType;
+        appState.setAlgoType(nextProps.params.algoType);
     }
 
     render() {

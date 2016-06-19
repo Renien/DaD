@@ -6,6 +6,17 @@ import appState from '../stores/index.jsx';
 
 @observer
 class MainLayout extends Component {
+
+    componentWillMount(){
+        //Initialize the default algo type
+        appState.algoType = this.props.params.algoType;
+    }
+
+    componentWillReceiveProps(nextProps) {
+        //Update the 'algoType' to the state
+        appState.algoType = nextProps.params.algoType;
+    }
+
     render() {
         return (
             <div className="ui container layout">

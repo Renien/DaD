@@ -10,5 +10,5 @@ import SplashScreen from './components/SplashScreen';
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={SplashScreen}/>
-        <Route path="/:algotype" component={MainLayout}/>
+        <Route path="/:algoType" component={MainLayout}/>
     </Router>, document.getElementById('root'));

@@ -20,8 +20,8 @@ class ExcelSerializer {
     _process(data) {
         let _super = this;
         _.map(data, function (obj) {
-            return _super.responce[obj['gsx$key']['$t']] = obj['gsx$value']['$t'];
-        })
+            _super.responce[obj['gsx$key']['$t']] = obj['gsx$value']['$t'];
+        });
     }
 
     /**

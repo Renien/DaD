@@ -11,11 +11,15 @@ class AppState {
     constructor() {
         this.textValue = "Hello World";
         this.algoType = "default";
+        this.codeSample = "code not available";
     }
     
-    //Bind the text data
-    setTextValue(data) {
-        this.textValue = data;
+    setAlgoType(data){
+        this.algoType = data;
+    }
+
+    setCodeSample(data) {
+        this.codeSample = data;
     }    
 }
 

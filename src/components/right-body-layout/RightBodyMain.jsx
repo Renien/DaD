@@ -2,12 +2,14 @@ import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 import WebService from '../../service/WebService';
 import apikeys from '../../service/apikeys.json';
+import JavaScriptEditor from './JavaScriptEditor.jsx';
 
 @observer
 class RightBodyMain extends Component {
 
     callBack(data){
         this.props.appState.setCodeSample(data['code']);
+        this.props.appState.updateCodeLoader(false);
     }
 
     componentDidMount() {
@@ -24,7 +26,7 @@ class RightBodyMain extends Component {
                     <a className="item" data-tab="third">Third</a>
                 </div>
                 <div className="ui bottom attached tab segment active" data-tab="code">
-                    {this.props.appState.codeSample}
+                    <JavaScriptEditor appState={this.props.appState}/>
                 </div>
                 <div className="ui bottom attached tab segment" data-tab="second">
                     Second

@@ -4,14 +4,14 @@ import {observable} from 'mobx';
 
 class AppState {
     
-    @observable textValue
+    @observable isCodeLoad
     @observable algoType
     @observable codeSample
     
     constructor() {
-        this.textValue = "Hello World";
         this.algoType = "default";
         this.codeSample = "code not available";
+        this.isCodeLoad = true;
     }
     
     setAlgoType(data){
@@ -20,7 +20,11 @@ class AppState {
 
     setCodeSample(data) {
         this.codeSample = data;
-    }    
+    }  
+
+    updateCodeLoader(data) {
+        this.isCodeLoad = data;
+    }  
 }
 
 export default  new AppState();

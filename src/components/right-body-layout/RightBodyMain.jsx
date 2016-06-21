@@ -10,6 +10,9 @@ class RightBodyMain extends Component {
     callBack(data){
         this.props.appState.setCodeSample(data['code']);
         this.props.appState.updateCodeLoader(false);
+        this.props.appState.setTheory(data['theory']);
+        this.props.appState.setSampleImplementation(data['sample_implementations']);
+        this.props.appState.setReferences(data['references']);
     }
 
     componentDidMount() {
@@ -18,21 +21,36 @@ class RightBodyMain extends Component {
     }
 
     render() {
+
+        let items = this.props.appState.references.map(item => {
+            return (
+                    <a className="item" href={item.url}>
+                        <i className="right triangle icon"></i>
+                        <div className="content">
+                        <div className="header">{item.header}</div>
+                        <div className="description">{item.description}</div>
+                        </div>
+                    </a>
+                    )
+                });
+
         return (
             <div>
                 <div className="ui top attached tabular menu">
                     <a className="item active" data-tab="code">Code</a>
-                    <a className="item" data-tab="second">Second</a>
-                    <a className="item" data-tab="third">Third</a>
+                    <a className="item" data-tab="second">Theory</a>
+                    <a className="item" data-tab="third">Reference</a>
                 </div>
                 <div className="ui bottom attached tab segment active" data-tab="code">
                     <JavaScriptEditor appState={this.props.appState}/>
                 </div>
                 <div className="ui bottom attached tab segment" data-tab="second">
-                    Second
+                    {this.props.appState.theory}
                 </div>
                 <div className="ui bottom attached tab segment" data-tab="third">
-                    Third
+                    <div className="ui list">
+                        {items}
+                     </div>
                 </div>
             </div>
         );

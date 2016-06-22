@@ -22,9 +22,9 @@ class RightBodyMain extends Component {
 
     render() {
 
-        let items = this.props.appState.references.map(item => {
+        let items = this.props.appState.references.map((item, index) => {
             return (
-                    <a className="item" href={item.url}>
+                    <a className="item" href={item.url} key={index}>
                         <i className="right triangle icon"></i>
                         <div className="content">
                         <div className="header">{item.header}</div>

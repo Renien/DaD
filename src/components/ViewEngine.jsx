@@ -15,7 +15,7 @@ class ViewEngine extends Component {
 
     render() {
         return (
-            <div>
+            <div className="ui segment">
                 <canvas id="algoview"/>
                 View Engine
             </div>

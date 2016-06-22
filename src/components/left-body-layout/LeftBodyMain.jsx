@@ -7,7 +7,7 @@ import {Link} from 'react-router';
 class LeftBodyMain extends Component {
     render() {
         return (
-            <div>
+            <div className="ui segment">
              <div className="ui relaxed divided list">
                 <div className="item">
                     <i className="large github middle aligned icon"></i>

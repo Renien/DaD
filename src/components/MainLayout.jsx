@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
-import LayOutCSS  from '../styles/layout.css';
+
 import BodyLayout from '../components/BodyLayout';
 import appState from '../stores/index.jsx';
 
@@ -19,15 +19,17 @@ class MainLayout extends Component {
 
     render() {
         return (
-            <div className="ui container layout">
-                <div className="segment ui">
-                    Header
+            <div>
+                <div className="ui inverted vertical footer segment">
+                    <div className="ui center aligned container">
+                        Data Algorithms Dissemination
+                    </div>
                 </div>
-                <div className="segment ui">
                     <BodyLayout appState={appState} />
-                </div>
-                <div className="segment ui">
-                    Footer
+                <div className="ui inverted vertical footer segment form-pag">
+                    <div className="ui center aligned container">
+                        Love of Data Science & Java Script by Renien
+                    </div>
                 </div>
             </div>
         );
